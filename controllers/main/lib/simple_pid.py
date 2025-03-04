@@ -21,7 +21,7 @@ class PID(object):
         Ki=0.0,
         Kd=0.0,
         Kf=0.0,
-        setpoint=0,
+        setpoint=0,                     # Public value to override in the control exercise
         sample_time=None,
         output_limits=(None, None),
         auto_mode=True,

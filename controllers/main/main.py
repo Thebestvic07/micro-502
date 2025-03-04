@@ -11,8 +11,8 @@ import lib.mapping_and_planning_examples as mapping_and_planning_examples
 import time, random
 import threading
 
-exp_num = 0                     # 0: Coordinate Transformation, 1: PID Tuning, 2: Kalman Filter, 3: Motion Planning, 4: Project
-control_style = 'keyboard'      # 'keyboard' or 'path_planner'
+exp_num = 1                     # 0: Coordinate Transformation, 1: PID Tuning, 2: Kalman Filter, 3: Motion Planning, 4: Project
+control_style = 'path_planner'      # 'keyboard' or 'path_planner'
 rand_env = False                # Randomise the environment
 
 # Global variables for handling threads
@@ -356,7 +356,7 @@ class CrazyflieInDroneDome(Supervisor):
                 yaw_rate = -1.0
             elif key == ord('X'):
                 altitude_velocity = 0.3
-            elif key == ord('Z'):
+            elif key == ord('C'):
                 altitude_velocity = -0.3
             key = self.keyboard.getKey()
         return [forward_velocity, left_velocity, altitude_velocity, yaw_rate]
